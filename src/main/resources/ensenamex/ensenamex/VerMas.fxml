@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Label?>
+<BorderPane style="-fx-background-color: #FFFFFF;"
+            xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ensenamex.ensenamex.VerMasController"
+            stylesheets="@styles.css">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="90.0" spacing="15.0">
+            <padding><Insets left="40.0" right="40.0" top="10.0" /></padding>
+            <children>
+                <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                    <image><Image url="@Logo.png" /></image>
+                </ImageView>
+                <HBox alignment="CENTER">
+                    <children>
+                        <Text fill="#4CAF50" text="En"><font><Font name="Wendy One" size="35.0" /></font></Text>
+                        <Text text="seña"><font><Font name="Wendy One" size="35.0" /></font></Text>
+                        <Text fill="#D32F2F" text="mex"><font><Font name="Wendy One" size="35.0" /></font></Text>
+                    </children>
+                </HBox>
+            </children>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="20.0">
+            <padding><Insets bottom="20.0" top="20.0" /></padding>
+            <children>
+                <Text text="VER MÁS" underline="true">
+                    <font><Font name="Wendy One" size="24.0" /></font>
+                </Text>
+
+                <!-- Contenedor de la imagen -->
+                <VBox alignment="CENTER" maxWidth="400.0" prefHeight="300.0" style="-fx-border-color: #E0E0E0; -fx-border-radius: 20; -fx-background-radius: 20;">
+                    <children>
+                        <ImageView fx:id="imgSena" fitHeight="300" fitWidth="300.0" preserveRatio="true" />
+                    </children>
+                </VBox>
+
+                <!-- Etiqueta con el tipo de seña (General/Ofensiva) -->
+                <Label fx:id="lblTipo" styleClass="badge-tipo" text="General" />
+
+                <!-- Tarjeta con Scroll para evitar que rebase la pantalla -->
+                <VBox maxWidth="600.0" prefHeight="220.0" style="-fx-border-color: #757575; -fx-border-radius: 20; -fx-background-radius: 20; -fx-padding: 10;">
+                    <children>
+                        <Text fx:id="txtTituloSena" text="Nombre de la Seña" textAlignment="CENTER">
+                            <font><Font name="Wendy One" size="22.0" /></font>
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="5.0" />
+                            </VBox.margin>
+                        </Text>
+
+                        <!-- ScrollPane que contendrá exclusivamente el texto largo -->
+                        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="AS_NEEDED" style="-fx-background-color: transparent; -fx-background: transparent; -fx-border-color: transparent;">
+                            <content>
+                                <VBox style="-fx-background-color: transparent;">
+                                    <children>
+                                        <Text fx:id="txtDescripcionSena" text="Descripción detallada aquí..." wrappingWidth="530.0">
+                                            <font><Font name="Ysabeau SC Regular" size="16.0" /></font>
+                                        </Text>
+                                    </children>
+                                </VBox>
+                            </content>
+                        </ScrollPane>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER_LEFT" prefHeight="60.0">
+            <padding><Insets left="40.0" bottom="20.0"/></padding>
+            <children>
+                <Button fx:id="btnvolver" onMouseClicked="#volver" styleClass="boton-volver" onAction="#volver" style="-fx-background-color: transparent;">
+                    <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="60.0">
+                            <image><Image url="@Iconos/Arrow_left_circle.png" /></image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>

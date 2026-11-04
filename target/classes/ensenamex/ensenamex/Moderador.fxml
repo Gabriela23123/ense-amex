@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane style="-fx-background-color: #FFFFFF;"
+            xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ensenamex.ensenamex.ModeradorController"
+            stylesheets="@styles.css">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="90.0" spacing="15.0">
+            <padding><Insets left="40.0" right="40.0" top="10.0"/></padding>
+            <children>
+                <ImageView fitHeight="110.0" fitWidth="110.0" preserveRatio="true">
+                    <image><Image url="@Logo.png"/></image>
+                </ImageView>
+                <HBox alignment="CENTER">
+                    <children>
+                        <Text fill="#4CAF50" text="En"><font><Font name="Wendy One" size="35.0"/></font></Text>
+                        <Text text="seña"><font><Font name="Wendy One" size="35.0"/></font></Text>
+                        <Text fill="#D32F2F" text="mex"><font><Font name="Wendy One" size="35.0"/></font></Text>
+                    </children>
+                </HBox>
+                <HBox HBox.hgrow="ALWAYS"/>
+                <Button onAction="#cerrarSesion"
+                        style="-fx-background-color: #C0392B; -fx-background-radius: 20; -fx-text-fill: white; -fx-cursor: hand; -fx-padding: 8 20;">
+                    <graphic>
+                        <Text text="Cerrar sesión" fill="white">
+                            <font><Font name="Itim" size="16.0"/></font>
+                        </Text>
+                    </graphic>
+                </Button>
+            </children>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="0">
+            <padding><Insets top="10" left="40" right="40" bottom="10"/></padding>
+            <children>
+                <Text text="Panel Moderador" style="-fx-font-family:'Wendy One'; -fx-font-size:28; -fx-fill:#333333;">
+                    <VBox.margin><Insets bottom="10"/></VBox.margin>
+                </Text>
+
+                <TabPane fx:id="tabPaneModerador" VBox.vgrow="ALWAYS" tabClosingPolicy="UNAVAILABLE"
+                         style="-fx-background-color: transparent;">
+
+                    <!-- TAB 1: VER PETICIONES -->
+                    <Tab text="Ver Peticiones">
+                        <VBox spacing="15">
+                            <padding><Insets top="20" bottom="10"/></padding>
+                            <children>
+                                <TableView fx:id="tablaPendientes" VBox.vgrow="ALWAYS" prefHeight="350"
+                                           style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #EDE7F6;">
+                                    <columns>
+                                        <TableColumn fx:id="colIdPend" text="ID" prefWidth="60"/>
+                                        <TableColumn fx:id="colNombrePend" text="Nombre" prefWidth="180"/>
+                                        <TableColumn fx:id="colDescPend" text="Descripción" prefWidth="500"/>
+                                        <TableColumn fx:id="colTipoPend" text="Tipo" prefWidth="180"/>
+                                    </columns>
+                                </TableView>
+                                <HBox spacing="15" alignment="CENTER_RIGHT">
+                                    <children>
+                                        <Button text="✔  Aceptar" onAction="#aceptarPeticion"
+                                                styleClass="btn-aceptar">
+                                            <font><Font name="Itim" size="16"/></font>
+                                        </Button>
+                                        <Button text="✘  Rechazar" onAction="#rechazarPeticion"
+                                                styleClass="btn-rechazar">
+                                            <font><Font name="Itim" size="16"/></font>
+                                        </Button>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </Tab>
+
+                    <!-- TAB 2: ESTADO DE PETICIONES -->
+                    <Tab text="Estado de Peticiones">
+                        <VBox spacing="15">
+                            <padding><Insets top="20" bottom="10"/></padding>
+                            <children>
+                                <Text text="Peticiones revisadas por ti"
+                                      style="-fx-font-family:'Ysabeau SC Regular'; -fx-font-size:18; -fx-fill:#757575;"/>
+                                <TableView fx:id="tablaRevisadas" VBox.vgrow="ALWAYS" prefHeight="350"
+                                           style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #EDE7F6;">
+                                    <columns>
+                                        <TableColumn fx:id="colIdRev" text="ID" prefWidth="60"/>
+                                        <TableColumn fx:id="colNombreRev" text="Nombre" prefWidth="250"/>
+                                        <TableColumn fx:id="colEstadoRev" text="Estado" prefWidth="150"/>
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </VBox>
+                    </Tab>
+                </TabPane>
+            </children>
+        </VBox>
+    </center>
+
+    <bottom>
+        <VBox>
+            <children>
+                <HBox alignment="CENTER_LEFT" prefHeight="80.0">
+                    <padding><Insets left="40.0" bottom="10.0"/></padding>
+                    <children>
+                        <Button onAction="#irAPrincipal" style="-fx-background-color: transparent;">
+                            <graphic>
+                                <ImageView fitHeight="60.0" fitWidth="60.0" preserveRatio="true">
+                                    <image><Image url="@Iconos/Arrow_left_circle.png"/></image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" prefHeight="40.0"
+                      style="-fx-background-color: #FFFFFF; -fx-border-color: #EDE7F6; -fx-border-width: 3 0 0 0; -fx-border-insets: 0 50 0 50;">
+                    <children>
+                        <Text text="Enseñamex®"><font><Font name="Itim" size="16.0"/></font>
+                            <HBox.margin><Insets left="15.0"/></HBox.margin>
+                        </Text>
+                        <HBox HBox.hgrow="ALWAYS"/>
+                        <Text text="Copyright© 2026"><font><Font name="Itim" size="16.0"/></font>
+                            <HBox.margin><Insets right="15.0"/></HBox.margin>
+                        </Text>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </bottom>
+</BorderPane>

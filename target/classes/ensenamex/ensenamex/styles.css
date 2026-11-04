@@ -1,0 +1,372 @@
+.root{
+
+    -fx-background-color:#F5F6FA;
+
+}
+
+/*TARJETAS*/
+
+
+.card{
+
+    -fx-background-color:white;
+
+    -fx-background-radius:22;
+
+    -fx-border-radius:22;
+
+    -fx-border-color:transparent;
+
+    -fx-effect:dropshadow(
+            gaussian,
+            rgba(0,0,0,.15),
+            18,
+            0,
+            0,
+            4);
+
+    -fx-padding:25;
+
+}
+.uploadCard{
+
+    -fx-background-color:#F3EDF8;
+
+    -fx-background-radius:22;
+
+    -fx-border-radius:22;
+
+    -fx-border-color:#E5DDF3;
+
+    -fx-effect:dropshadow(gaussian,
+    rgba(0,0,0,.08),
+    10,
+    0,
+    0,
+    3);
+
+    -fx-padding:25;
+
+}
+
+/* =========================
+        INPUTS
+   ========================= */
+
+.input{
+
+    -fx-background-color:white;
+
+    -fx-background-radius:18;
+
+    -fx-border-radius:18;
+
+    -fx-border-color:#D5D8E2;
+
+    -fx-padding:10;
+
+    -fx-font-size:14;
+
+}
+
+.text-area .content{
+
+    -fx-background-color:white;
+
+    -fx-background-radius:18;
+
+    -fx-border-radius:18;
+
+}
+.text-area .content{
+
+    -fx-background-radius:18;
+
+}
+
+
+/* =========================
+        BOTON VERDE
+   ========================= */
+
+.primaryButton{
+
+    -fx-background-color:#46B161;
+
+    -fx-text-fill:white;
+
+    -fx-font-size:14;
+
+    -fx-font-weight:bold;
+
+    -fx-background-radius:18;
+
+    -fx-padding:10 28;
+
+    -fx-cursor:hand;
+
+}
+
+.primaryButton:hover{
+
+    -fx-background-color:#3CA657;
+
+}
+
+
+/* =========================
+        BOTON ROJO
+   ========================= */
+
+.secondaryButton{
+
+    -fx-background-color:#E64A4A;
+
+    -fx-text-fill:white;
+
+    -fx-font-size:14;
+
+    -fx-background-radius:18;
+
+    -fx-padding:10 28;
+
+    -fx-cursor:hand;
+
+}
+
+.secondaryButton:hover{
+
+    -fx-background-color:#D63D3D;
+
+}
+
+
+/* =========================
+        PANEL SUBIDA
+   ========================= */
+
+.uploadImage{
+
+    -fx-cursor:hand;
+
+}
+
+
+/* =========================
+        LABELS
+   ========================= */
+
+.fileLabel{
+
+    -fx-text-fill:#777777;
+
+    -fx-font-size:13;
+
+}
+
+.errorLabel{
+
+    -fx-text-fill:#D32F2F;
+
+    -fx-font-size:12;
+
+    -fx-font-weight:bold;
+
+}
+/* =========================
+        TITULOS
+   ========================= */
+
+.title{
+
+    -fx-font-family:"Wendy One";
+
+    -fx-font-size:28;
+
+}
+
+/* =========================
+      PLACEHOLDER
+   ========================= */
+
+.text-field,
+.text-area{
+
+    -fx-prompt-text-fill:#A4A4A4;
+
+}
+
+/* =========================
+      PANEL IZQUIERDO
+   ========================= */
+
+.uploadText{
+
+    -fx-font-size:16;
+
+}
+
+.uploadSmall{
+
+    -fx-font-size:13;
+
+    -fx-text-fill:#777777;
+
+}
+
+/* =========================
+      BOTONES
+   ========================= */
+
+.primaryButton{
+
+    -fx-pref-width:120;
+
+    -fx-pref-height:38;
+
+}
+
+.secondaryButton{
+
+    -fx-pref-width:120;
+
+    -fx-pref-height:38;
+
+}
+
+/* Menus */
+
+/* Estilo general de la "caja" del menú */
+.menu-personalizado {
+    -fx-background-color: #EDE7F6;
+    -fx-background-radius: 15;
+    -fx-padding: 5 0 5 0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 5);
+}
+
+/* Estilo de las opciones normales */
+.menu-personalizado .menu-item {
+    -fx-padding: 10 25 10 25;
+    -fx-border-color: white;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-insets: 0 15 0 15;
+    -fx-cursor: hand;
+}
+
+/* Color del texto de las opciones normales */
+.menu-personalizado .menu-item .label {
+    -fx-font-size: 16px;
+    -fx-text-fill: black;
+}
+
+/* EL HOVER: Color y crecimiento cuando pasas el cursor por una opción */
+.menu-personalizado .menu-item:focused {
+    -fx-background-color: #D1C4E9;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* Estilo particular para el botón de salir (le quitamos la línea blanca abajo) */
+.menu-personalizado .item-salir {
+    -fx-border-width: 0;
+}
+
+/* Texto rojo y negrita para salir */
+.menu-personalizado .item-salir .label {
+    -fx-text-fill: #D32F2F;
+    -fx-font-weight: bold;
+}
+
+/* EL HOVER: Color y crecimiento cuando pasas el cursor por "Cerrar sesión" */
+.menu-personalizado .item-salir:focused {
+    -fx-background-color: #FFCDD2;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/*hover volver*/
+/* Estilo base del botón */
+.boton-volver {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-transition: 0.3s;
+}
+
+/* Efecto al pasar el mouse */
+.boton-volver:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0);
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+/*Barra de busqueda*/
+/* Estado normal de tu barra de búsqueda */
+.search-bar {
+    -fx-background-color: #EDE7F6;
+    -fx-background-radius: 25;
+    -fx-cursor: hand;
+    /* Transición suave para el color de fondo */
+    -fx-transition: -fx-background-color 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.search-bar:hover {
+    -fx-background-color: #E1D8F1; /* Un tono un poco más oscuro */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2); /* Sombra suave */
+    -fx-scale-x: 1.02; /* Aumenta un poquito el tamaño */
+    -fx-scale-y: 1.02;
+}
+
+/* =========================
+      BOTONES ACEPTAR / RECHAZAR
+   ========================= */
+
+.btn-aceptar {
+    -fx-background-color: #40A05A;
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+    -fx-padding: 8 25;
+    -fx-cursor: hand;
+}
+
+.btn-aceptar:hover {
+    -fx-background-color: #34884B;
+}
+
+.btn-rechazar {
+    -fx-background-color: #C0392B;
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+    -fx-padding: 8 25;
+    -fx-cursor: hand;
+}
+
+.btn-rechazar:hover {
+    -fx-background-color: #A32E22;
+}
+
+.badge-tipo {
+    -fx-background-radius: 15;
+    -fx-padding: 4 18;
+    -fx-font-size: 18px;
+    -fx-font-family: 'Itim';
+    -fx-text-fill: #333333;;
+}
+
+.filtro-chip {
+    -fx-background-color: #EDE7F6;
+    -fx-text-fill: #5E5E5E;
+    -fx-background-radius: 20;
+    -fx-padding: 6 20;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+.filtro-chip:hover {
+    -fx-background-color: #E1D8F1;
+}
+
+.filtro-chip:selected {
+    -fx-background-color: #40A05A;
+    -fx-text-fill: white;
+}

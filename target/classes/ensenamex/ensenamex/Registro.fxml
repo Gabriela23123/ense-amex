@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ensenamex.ensenamex.RegistroController"
+            style="-fx-background-color: white;">
+
+    <center>
+        <VBox alignment="CENTER" maxWidth="700" maxHeight="650" spacing="30"
+              style="-fx-border-color: #d1d1d1; -fx-border-radius: 20; -fx-background-radius: 20; -fx-background-color: #ffffff; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+
+            <padding>
+                <Insets top="50" right="50" bottom="50" left="50"/>
+            </padding>
+
+            <Text text="REGISTRO" style="-fx-font-weight: bold; -fx-font-size: 36; -fx-font-family: 'Wendy One';"/>
+
+            <TextField fx:id="txtUser" promptText="Usuario" prefHeight="45"
+                       style="-fx-background-radius: 20; -fx-padding: 10 15; -fx-font-family: 'Itim'; -fx-font-size: 16;"/>
+
+            <PasswordField fx:id="txtContra" promptText="Contraseña" prefHeight="45"
+                           style="-fx-background-radius: 20; -fx-padding: 10 15; -fx-font-family: 'Itim'; -fx-font-size: 16;"/>
+
+            <TextField fx:id="txtTelefono" promptText="Teléfono" prefHeight="45"
+                       style="-fx-background-radius: 20; -fx-padding: 10 15; -fx-font-family: 'Itim'; -fx-font-size: 16;"/>
+
+            <TextField fx:id="txtCorreo" promptText="Correo" prefHeight="45"
+                       style="-fx-background-radius: 20; -fx-padding: 10 15; -fx-font-family: 'Itim'; -fx-font-size: 16;"/>
+
+            <!-- Label de edad-->
+            <VBox alignment="CENTER_LEFT" maxWidth="420" spacing="5">
+                <Label text="Edad:" style="-fx-font-family: 'Itim'; -fx-font-size: 16; -fx-text-fill: #666666; -fx-font-weight: bold;"/>
+                <Spinner fx:id="spinnerEdad" editable="true" prefWidth="420" prefHeight="45"
+                         style="-fx-background-radius: 20; -fx-font-family: 'Itim'; -fx-font-size: 16;"/>
+            </VBox>
+
+            <Button fx:id="btnRegistro" text="Registrarse" onAction="#registrarUsuario" prefHeight="50"
+                    style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 25; -fx-padding: 10 40; -fx-font-size: 18; -fx-font-weight: bold; -fx-cursor: hand; -fx-font-family: 'Itim';"/>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER_LEFT" prefHeight="80.0">
+            <padding><Insets left="40.0" bottom="30.0"/></padding>
+            <children>
+                <Button fx:id="btnvolver" styleClass="boton-volver" onAction="#volver" style="-fx-background-color: transparent; -fx-cursor: hand;">
+                    <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" preserveRatio="true">
+                            <image><Image url="@Iconos/Arrow_left_circle.png" /></image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>
